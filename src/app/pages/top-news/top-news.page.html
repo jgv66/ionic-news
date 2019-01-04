@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>top-news</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-refresher stot="fixed" (ionRefresh)="onRefresh($event)">
+      <ion-refresher-content>
+
+      </ion-refresher-content>
+    </ion-refresher>
+
+    <app-articles [news]="news"></app-articles>
+
+</ion-content>

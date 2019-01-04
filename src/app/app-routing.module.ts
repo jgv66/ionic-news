@@ -2,7 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'source', loadChildren: './pages/source/source.module#SourcePageModule' }
+  /*
+  { path: 'headlines',  loadChildren: './headlines/headlines.module#HeadlinesPageModule' },
+  { path: 'sources',    loadChildren: './sources/sources.module#SourcesPageModule' },
+  { path: 'favorites',  loadChildren: './favorites/favorites.module#FavoritesPageModule' },
+  { path: 'settings',   loadChildren: './settings/settings.module#SettingsPageModule' }
+  */
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
