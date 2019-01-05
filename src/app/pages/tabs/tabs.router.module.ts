@@ -33,13 +33,12 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../sources/sources.module#SourcesPageModule'
+          },
+          {
+            path: ':id',
+            loadChildren: '../source/source.module#SourcePageModule'
           }
         ]
-      },
-      {
-        path: 'sources/:id',
-        outlet: 'sources',
-        component: SourcePage
       },
       {
         path: 'favorites',
