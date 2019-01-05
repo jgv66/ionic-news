@@ -8,8 +8,8 @@ import { NewsService } from 'src/app/services/news.service';
 })
 export class HeadlinesPage implements OnInit {
 
-  private news: any;
-  private categories = ['Chile', 'World', 'Business', 'India', 'Technology', 'Entertainments', 'Sports', 'Science'];
+  news: any;
+  categories = ['Chile', 'World', 'Business', 'India', 'Technology', 'Entertainments', 'Sports', 'Science'];
 
   constructor( private newsService: NewsService) { }
 

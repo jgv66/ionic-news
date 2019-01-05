@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { PipesModule } from './pipes/pipes.module';
 import { SharedService } from './services/shared.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +26,7 @@ import { SharedService } from './services/shared.service';
     HttpClientModule, 
     ComponentsModule, 
     PipesModule, 
-    IonicStorageModule.forRoot() ],
+    IonicStorageModule.forRoot(), ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) ],
   providers: [
     StatusBar,
     SplashScreen,

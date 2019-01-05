@@ -11,9 +11,9 @@ import { ToastController } from '@ionic/angular';
 })
 export class SourcesPage implements OnInit {
 
-  private sources: any;
-  private fakeSources = new Array(20);
-  private term = '';
+  sources: any;
+  fakeSources = new Array(20);
+  term = '';
 
   constructor( private newsService: NewsService,
                public  sharedService: SharedService,
